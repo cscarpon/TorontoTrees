@@ -42,7 +42,7 @@ out_dir <- file.path("E:", "LIDAR", "Processed")
 lasFile<- list.files(path = tmp_dir, full.names = TRUE, pattern = ".las")
 
 
-for (i in 133:nrow(hoods)) {
+for (i in 1:nrow(hoods)) {
   hood <- hoods[i,]
   hoodJoin <- st_join(hood,tiles)
   hoodRoads <- st_intersection(hood, roadBuffer)
